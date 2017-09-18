@@ -1,0 +1,65 @@
+% !TeX program = xelatex
+
+\documentclass[12pt,a4paper]{article} 
+
+\usepackage{siunitx}
+\sisetup{math-rm = \ensuremath,math-micro = \symup{μ}}
+
+% für Textschriftart
+\usepackage{fontspec}
+
+% für Matheschriftarten
+\usepackage{unicode-math}
+
+% legt Schriftart für Text fest, kann eine beliebige Systemschriftart sein
+\setmainfont{Verdana}
+
+
+% legt Schriftarten für Mathematik fest:
+
+% Schriftart für Sonderzeichen, zum Beispiel:
+% latinmodern-math.otf, xits-math.otf, stixmath-regular.otf, Asana-Math.otf, texgyrepagella-math.otf, euler.otf, texgyredejavu-math.otf
+\setmathfont[Scale=MatchUppercase]{latinmodern-math.otf}				
+
+% Schriftarten für grosse und kleine, griechische und lateinische Buchstaben sowie Zahlen, beliebige Systemschriftart
+\setmathfont[range=up/{greek,Greek,latin,Latin,num}]{Verdana}
+\setmathfont[range=it/{greek,Greek,latin,Latin,num}]{Verdana}
+\setmathfont[range=bb/{greek,Greek,latin,Latin,num}]{Verdana}
+
+
+
+
+\setlength{\parindent}{0pt}
+\begin{document}
+
+\begin{center}\Large
+XeLaTeX mit Verdana-Font
+\end{center}
+
+\begin{center}
+\textbf{Wichtig:} Mit XeLaTeX kompilieren.
+\end{center}
+
+\section{Text}\sloppy
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\\
+
+\SI{5}{\mu mol} bei einer Ausbeute von \SI{75}{\%} bei $\Delta T=\SI{50}{K}$. \\
+
+By employing the Eyring equation of the transition state theory, the activation enthalphy $\Delta H=\SI{43(3)}{kJ\:mol^{-1}}$ and activation entropy $\Delta S=\SI{-91(10)}{J\:K^{-1}\:mol^{-1}}$ were acquired.
+
+
+\section{Gleichungen}
+\begin{equation}
+k(T)=A\cdot\exp\left(-\frac{E_A}{RT}\right)\qquad\Leftrightarrow\qquad \ln k=-\frac{E_A}{RT}+\ln A
+\end{equation}
+
+\begin{equation}
+q_v=\prod_{i=1}^s\left(1-e^{-\frac{h\nu_i}{k_\textrm{B}T}}\right)^{-1}
+\end{equation}
+
+\begin{equation}
+\textrm{Gr}=\frac{L_c^3\,g\,\beta\,\Delta T\,\rho^2}{\mu^2}
+\end{equation}
+
+
+\end{document}
