@@ -1,0 +1,20 @@
+---
+layout: entry
+datechanged: 18.09.17
+---
+
+<h1>LaTeX-Tipp aus 2017.3: Schriftarten mit XeLaTeX</h1>
+<span class="tipp"> Die Möglichkeiten in dem häufig verwendeten pdfLaTeX eine andere Schriftart zu verwenden, sind beschränkt. Die Verwendung beliebiger Schriftarten des eigenen Computers, wie man es von Office kennt, ist jedoch mit XeLaTeX und Paketen möglich.</br>
+Nutzt man das Paket <i>fontspec</i> und den zugehörigen Befehl <i>\setmainfont{Name}</i>, reicht das um die gewählte Schriftart für jeglichen Text zu verwenden. Zum Kompilieren muss dazu jedoch XeLaTeX bzw. XeTeX anstatt LaTeX verwendet werden, wie es bei allen gängigen TeX-Editoren leicht vor dem Kompilieren auswählbar ist.</br>
+Sollen auch mathematische Formeln eine andere Schriftart erhalten, so kommt das Paket "unicode-math" zum Zug, das mit <i>\setmathfont{Name}</i> ähnlich funktioniert.
+Leider besitzen viele Schriftarten nicht alle mathematischen Symbole, sodass die Auswahl dort beschränkter ist.</span>
+
+
+<h2>Weitere Hinweise</h2>
+
+<span>XeLaTeX ist in den gängigen TeX-Distributionen standardmässig enthalten.</span>
+<span>Praktisch alle TeX-Editoren wie TeXStudio, TeXMaker und TeXWorks können XeLaTeX auch direkt zum Kompilieren verwenden, wobei sich häufig eine entsprechende Auswahl in der Haupttoolleiste findet. Sonst sollte die Option mit Google zu finden sein.</span>
+</br></br><span>Alternativ kann ein Dokument direkt mittels der Kommandozeile kompiliert werden:</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>xelatex Pfad/zur/Datei.tex</code></pre></div>
+
+</br><span>Die zu verwendende Schriftart muss zum Kompilieren auf dem Computer installiert sein. Je nach Betriebssystem sind also nicht alle hier verwendeten Beispiele kompilierbar, da gegebenenfalls die jeweilige Schriftart fehlt.</span>
