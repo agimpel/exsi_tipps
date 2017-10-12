@@ -1,0 +1,48 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+}
+
+.h, .main-content .h {
+  color: #F2994A !important;
+  font-family: 'Dosis', sans-serif;
+}
+
+.h_sub {
+  color: #F2C94C !important;
+}
+
+i {
+  font-family: 'Source Code Pro', monospace;
+  font-style: normal;
+}
+
+
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.project-name {
+  font-family: 'Raleway', sans-serif;
+}
+
+.page-header {
+  background: #F2994A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
